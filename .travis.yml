@@ -1,7 +1,7 @@
 language: java
 
 before_install: 
-  - echo "MAVEN_OPTS='-Xmx2048M -Xss128M -XX:+CMSClassUnloadingEnabled -XX:+UseG1GC -XX:-UseGCOverheadLimit'" > ~/.mavenrc
+  - echo "MAVEN_OPTS='-Xmx2048M -Xss128M -XX:+CMSClassUnloadingEnabled -XX:+UseG1GC -XX:-UseGCOverheadLimit' -Dgib.failOnMissingGitDir=false" > ~/.mavenrc
 
 install: travis_wait 60 mvn -q test -fae
 
@@ -19,5 +19,9 @@ cache:
   directories:
   - .autoconf
   - $HOME/.m2
+  
+  
+  
+
   
 
