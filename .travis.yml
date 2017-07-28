@@ -21,7 +21,7 @@ cache:
   - $HOME/.m2
   
 env:
-  - failOnMissingGitDir=false
+  - gib.failOnMissingGitDir=false
 
   
   
